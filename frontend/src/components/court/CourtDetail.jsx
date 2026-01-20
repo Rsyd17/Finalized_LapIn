@@ -195,7 +195,7 @@ export const CourtDetail = () => {
                 <img src={court.img} alt={court.name} className="w-full h-full object-cover" />
               </div>
               <h1 className="text-3xl md:text-4xl font-bold text-black mb-1">{court.name}</h1>
-              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Available for</p>
+              <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Tersedia Untuk</p>
               <div className="flex gap-6 mb-6">
                 {court.sports.map((sport, idx) => (
                   <div key={idx} className="flex items-center gap-2">
@@ -343,12 +343,3 @@ const SportIcon = ({ type }) => {
   );
 };
 
-// --- FACILITY ICONS (Kept as SVGs) ---
-const FacilityIcon = ({ type }) => {
-  if (type === "car") return <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M8 7h8m-8 0a2 2 0 00-2 2v4a2 2 0 002 2h8a2 2 0 002-2V9a2 2 0 00-2-2m-8 0V5a2 2 0 012-2h4a2 2 0 012 2v2m-6 9v2m6-2v2" /></svg>;
-  if (type === "motor") return <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>;
-  if (type === "drink") return <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>;
-  if (type === "toilet") return <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>;
-  if (type === "mosque") return <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>;
-  return null;
-};

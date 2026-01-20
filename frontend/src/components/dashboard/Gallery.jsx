@@ -49,7 +49,7 @@ export const Gallery = () => {
       
       {/* --- NEW HEADER ADDED HERE --- */}
       <h2 className="text-center text-[#36499C] text-3xl md:text-4xl font-bold uppercase tracking-wide mb-8 font-bebas select-none">
-        Gallery Sport Center
+        Galeri Sport Center
       </h2>
 
       {/* Scroll Container */}

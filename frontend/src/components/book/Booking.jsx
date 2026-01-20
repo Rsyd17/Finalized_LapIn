@@ -130,7 +130,7 @@ const CourtCard = ({ data }) => {
         <div className="p-8">
           {/* Added font-oswald to Court Name for consistency with previous pages (optional) */}
           <h3 className="text-2xl font-bold text-black mb-1 font-oswald">{data.name}</h3>
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4 font-roboto">Available for</p>
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-4 font-roboto">Tersedia Untuk</p>
           <div className="flex items-end justify-between">
             <div className="flex gap-4">
               {data.sports.map((sport, index) => (

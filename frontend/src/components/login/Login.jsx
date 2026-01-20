@@ -106,12 +106,12 @@ export const Login = () => {
         <div className="w-full max-w-md">
           {/* UPDATED: Font Bebas Neue */}
           <h2 className="text-6xl font-bebas text-[#36499C] text-center mb-12 tracking-wide">
-            Login
+            Masuk
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2 ml-1">Username / NPM</label>
+              <label className="block text-sm font-medium text-gray-700 mb-2 ml-1">Username</label>
               <input type="text" name="username" value={formData.username} onChange={handleChange} className={inputClasses} required />
             </div>
 
@@ -131,11 +131,11 @@ export const Login = () => {
             </div>
 
             <button className="w-full bg-[#36499C] hover:bg-[#2a3a7c] text-white font-bold text-lg py-4 rounded-2xl shadow-lg transition-transform transform active:scale-95">
-              Login
+              Masuk
             </button>
 
             <div className="text-center mt-6 text-sm text-gray-600">
-              Belum punya akun? <Link to="/signup" className="font-bold text-black hover:underline">Sign Up</Link>
+              Belum punya akun? <Link to="/signup" className="font-bold text-black hover:underline">Daftar</Link>
             </div>
           </form>
         </div>

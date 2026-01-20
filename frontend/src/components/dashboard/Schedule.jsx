@@ -33,23 +33,26 @@ export const Schedule = () => {
     return date.toLocaleTimeString('id-ID', { hour12: false });
   };
 
-  // --- FETCH SCHEDULE ---
-  useEffect(() => {
-    const fetchSchedule = async () => {
-      const courtId = courtMapping[selectedCourtName];
-      const today = new Date().toISOString().split('T')[0]; 
+// --- FETCH SCHEDULE ---
+useEffect(() => {
+  const fetchSchedule = async () => {
+    const courtId = courtMapping[selectedCourtName];
+    
+    // FIX: Get local YYYY-MM-DD instead of UTC
+    const now = new Date();
+    const offset = now.getTimezoneOffset() * 60000;
+    const localISOTime = (new Date(now - offset)).toISOString().split('T')[0];
 
-      try {
-        const response = await fetch(`http://localhost:5000/api/schedule?courtId=${courtId}&date=${today}`);
-        const data = await response.json();
-        setBookedSlots(data);
-      } catch (error) {
-        console.error("Error loading schedule:", error);
-      }
-    };
-
-    fetchSchedule();
-  }, [selectedCourtName]);
+    try {
+      const response = await fetch(`http://localhost:5000/api/schedule?courtId=${courtId}&date=${localISOTime}`);
+      const data = await response.json();
+      setBookedSlots(data);
+    } catch (error) {
+      console.error("Error loading schedule:", error);
+    }
+  };
+  fetchSchedule();
+}, [selectedCourtName]);
 
   // --- GENERATE LIST ---
   const generateScheduleList = () => {

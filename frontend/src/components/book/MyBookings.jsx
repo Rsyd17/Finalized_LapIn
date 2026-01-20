@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { DashNavbar } from '../Dashboard/DashNavbar';
+import { DashNavbar } from '../dashboard/DashNavbar';
 
 export const MyBookings = () => {
   const [bookings, setBookings] = useState([]);

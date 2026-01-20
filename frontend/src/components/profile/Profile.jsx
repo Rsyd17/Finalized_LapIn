@@ -153,7 +153,7 @@ export const Profile = () => {
             </svg>
           </button>
           <div>
-            <h1 className="text-3xl font-bold uppercase tracking-wide">WELCOME, {formData.nama.split(' ')[0]}</h1>
+            <h1 className="text-3xl font-bold uppercase tracking-wide">Selamat Datang, {formData.nama}</h1>
             <p className="text-blue-100 text-sm mt-1">Kelola data diri anda</p>
           </div>
         </div>

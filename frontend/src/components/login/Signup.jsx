@@ -120,7 +120,7 @@ export const Signup = () => {
         <div className="w-full max-w-md space-y-8">
           {/* UPDATED: Font Bebas Neue */}
           <h2 className="text-6xl font-bebas text-[#36499C] text-center tracking-wide">
-            Sign Up
+            daftar
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
@@ -156,11 +156,11 @@ export const Signup = () => {
             </div>
 
             <button type="submit" className="w-full bg-[#36499C] hover:bg-[#2a3a7c] text-white font-bold text-lg py-4 rounded-2xl shadow-lg transition-transform transform active:scale-95 mt-6">
-              Sign Up
+              Daftar
             </button>
 
             <div className="text-center mt-6 text-sm text-gray-600">
-              Sudah punya akun? <Link to="/login" className="font-bold text-[#36499C] hover:underline">Login</Link>
+              Sudah punya akun? <Link to="/login" className="font-bold text-[#36499C] hover:underline">Masuk</Link>
             </div>
           </form>
         </div>
