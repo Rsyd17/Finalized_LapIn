@@ -100,7 +100,7 @@ export const ForgotPassword = () => {
         </form>
 
         <div className="mt-8 text-gray-600 text-sm">
-          Kembali ke <Link to="/login" className="font-bold text-black hover:underline">Login</Link>
+          Kembali ke <Link to="/login" className="font-bold text-black hover:underline">Masuk</Link>
         </div>
 
       </div>
