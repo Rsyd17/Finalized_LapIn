@@ -33,7 +33,7 @@ export const Footer = () => {
           <h3 className="text-white font-bold text-lg mb-2">Link</h3>
           <div className="h-0.5 w-12 bg-gray-500 mb-6"></div>
           <ul className="space-y-2 text-sm">
-            <Link to="/faq" className="hover:text-white transition">FAQ</Link>            
+            <Link to="/faq" className="hover:text-white transition">FAQ</Link>      
             <li><a href="https://www.instagram.com/sc.gunadarma/" target="_blank" className="hover:text-white transition">Instagram Sport Center</a></li>
             <li><a href="https://www.instagram.com/lapin.id/" target="_blank" className="hover:text-white transition">Instagram LapIn</a></li>
           </ul>

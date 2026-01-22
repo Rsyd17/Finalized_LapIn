@@ -20,7 +20,11 @@ exports.createBooking = async (req, res) => {
       [userId, courtId, date, startTime, endTime, krsFilename]
     );
 
-    const notifMessage = `Booking berhasil dibuat untuk tanggal ${date} jam ${timeSlot}. Menunggu verifikasi admin.`;
+    // Ambil nama lapangan
+    const [courtData] = await db.query('SELECT name FROM courts WHERE court_id = ?', [courtId]);
+    const courtName = courtData.length > 0 ? courtData[0].name : 'Lapangan';
+
+    const notifMessage = `Booking berhasil dibuat untuk ${courtName} tanggal ${date} jam ${timeSlot}. Menunggu verifikasi admin.`;
     await db.query('INSERT INTO notifications (user_id, message) VALUES (?, ?)', [userId, notifMessage]);
 
     res.status(201).json({ message: "Booking berhasil dibuat! Menunggu verifikasi admin." });
